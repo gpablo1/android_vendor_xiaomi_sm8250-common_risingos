@@ -11,6 +11,7 @@ on post-fs-data
 #start dpmd service
 service dpmd /system/system_ext/bin/dpmd
     class late_start
+    user root
     socket dpmd stream 660 root radio
     socket tcm  stream 660 root inet
     socket dpmwrapper stream 660 root inet
